@@ -1,217 +1,128 @@
-﻿!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-<script src="https://vuejs.org/js/vue.js"></script>
- <script src="js/vue_script.js"></script>
- <script src="js/js_script.js"></script>
-
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<title>Tysks burgerjoint</title>
- <meta charset="utf-8"/>
-
-    
-<body>
-<main>
-<div class="HeaderContainer">
-<img src=https://greatbritishmag.co.uk/wp-content/uploads/2018/08/Pub-culture-featured-compressed.jpg  alt="Header" style="width:100%; height:200px">
-<div class="HeadlineText">Welcome to Tysks burgerjoint</div>
-
-
-</div>
-</head>
-</div>
-</figure>
-
-<section class="BurgerInfo">
-
-
-<div id="Burgarmeny">
-<h2>
-Burger selection</h2>
-
- 
-<h3>
-Please select a delicious burger
-</h3>
-
-<table>
-<tr>
-<td>
-<figure>
-<div class="FigCap">
-<figcaption>Suicide</figcaption>
-</div>
-<div class="burgerwrapper">
-<div class="column">
-  <div class="row">
-<div id="burgerbacon">
-    <img src="https://st2.depositphotos.com/3957801/5642/i/950/depositphotos_56423065-stock-photo-bacon-burger.jpg" alt="Bacondream" style="width:150px;height:150px;">
-  <ul>
-    <li>Cheese</li>
-    <li>Meet(Angus beef)</li>
-    <li>Contains lactos</li>
-</ul>
-</div>
-</div>
-</td>
-</figure>
-
-
-<figure>
-<td>
-</div>
-<div class="FigCap">
-<figcaption>Heartattack</figcaption>
-</div>
-<div class="burgerwrapper">
-  <div class="column">
-<div id="burgerbig">	
-    <img src="https://bigseventravel.com/wp-content/uploads/2019/02/Screenshot-2019-02-19-at-22.22.15.png" alt="2 pound dream" style="width:150px;height:150px;">
-    <ul>
-    <li>Cheese</li>
-    <li>Meet(Angus beef)</li>
-    <li>Contains lactos</li>
-</ul>
-</div>
-</div>
-</div>
-</figure>
-</td>
-
-
-<td>
-<figure>
-<div class="FigCap">
-<figcaption>Veganvänster</figcaption>
-</div>
-<div class="burgerwrapper">
-  <div class="column">
-	<div id="burgervegan">
-    <img src="https://www.thespruceeats.com/thmb/K27YgK9PMkhtll2EqIW6x-Crg-E=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg" title="vegan dream" alt="Vegan dream XXL" style="width:150px;height:150px;">
-    <ul>
-    <li>Cheese</li>
-    <li>Meet(Angus beef)</li>
-    <li>Contains lactos</li>
-
-</ul>
-</tr>
-</td>
-</figure>
-</div>
-</div>
-</div>
-
- </table>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="Customer information"> 
-
-<br />
-<section> 
-<h4>
-Customer information
-</h4>
-
-</section>
-<section id="contact">
-Please fill in your adress below
-<p>
-    <label for="Full name">Full name</label><br>
-    <input type="text" id="Full name"="Fn" required="required" placeholder="Full name">
-</p>
-<p>
-    <label for="email">Email adress</label><br>
-    <input type="text" id="email adress" name="Ea" placeholder="Email adress">
-</p>
-<p>
-	<label for="street">Street</label><br>
-    <input type="street" id="steet" name="St" required="required" placeholder="Street">
-</p>
-<p>
-	<label for="house">House</label><br>
-    <input type="street" id="house" name="Ho" required="required" placeholder="House">
-</p>
-</form>
-</section>
-
-<form>
-<p>
-    <label for="SP">Select paymethod</label><br>
-    <select v-model="Payment" id="PayOp">
-        <option>Visa</option>
-        <option>Mastercard</option>
-        <option>American express</option>
-        <option>Paypal</option>
-        <option>Klarna checkout</option>
-    </select>
-<br>
-<div class="Gender">
-<p>
- <label for="G">Gender</label><br>
-<input type="radio" checked="checked" name="gender" value="male"> Male<br>
-<input type="radio" name="gender" value="female"> Female<br>
-<input type="radio" name="gender" value="other"> Other
-</p>
-<button
-	type="submit" value="Let's GO" class="button"style="width: 5em; height: 3em" alt="icon">
-Let's do this!
-</button>
-</div>
-</main>
-</body>
-</div>
-
-
-<hr>
-<footer>
-  <p>2019 Tysks burgerjoint inc. 
-  <p>
-  
-</footer>
-<h3	>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="socket.io/socket.io.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/menu.js"></script>
+		<script src="js/js_script.js"></script>
+		<script src="https://vuejs.org/js/vue.js" defer></script>
+		<script src="js/vue_script.js" defer></script>
+
+
+       
+
+
+		
+		<title>Fat Burgers</title>
+	</head>
+	<body>
+		<main id="vuecontrolled">
+		<div class="HeaderContainer">
+			<img id="headImg" src="img\Pub.jpg" alt="The best Burgerjoint in town" title="Burgerjoint">
+				<div class="HeaderText"> Welcome to the best Burgerjoint</div>
+			</div>
+			</div>
+			<section class="burgermenu" id="firstSection">
+				<h1>Choose on of our hamburger</h1>
+					<p>Here you execute selection of burgers!</p>
+					<div id="burgerDisplay">
+						<div id="burgerMenu" v-for="burger in burgers">
+							<h2>{{ burger.name }}</h2>
+							<img :src="burger.picture" :alt="burger.name" :title="burger.name" width="100%">
+							<table>
+
+									<ul>
+										<li >kcal: {{burger.kCal}}</li>
+										<li v-if ="burger.gluten">Contains <span id="ingredients">gluten</span></li>
+										<li v-if ="burger.lactose">Contains <span id="ingredients">lactose</span></li>
+									</ul>
+								</td>
+							</table>
+							<input type="checkbox" :value="burger.name" :id="burger.name" v-model="burgerType" required="required">
+							<label :for="burger.name">Choose</label>
+						</div>
+					</div>
+			</section>
+			<section id="secondSection">
+				<h2>Hey, where do you live?</h2>
+					<p>Fill in your address below please</p>
+				<section id="contact">
+					<form id="personalInfo">
+						<fieldset>
+						<legend>Delivery information:</legend>
+							<p>
+								<label for="name">Name</label><br>
+								<input type="text" id="name" name="fn" required="required" placeholder="First- and Last name">
+							</p>
+							<p>
+								<label for="email">E-mail</label><br>
+								<input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+							</p>
+						
+						</fieldset>
+						<p>
+							<label for="payment">Payment method</label><br>
+							<select id="payment" name="pay">
+								<option selected="selected">Credit card</option>
+								<option>Swish</option>
+								<option>PayPal</option>
+								<option>Klarna checkout</option>
+                                                                <option>Pay by doing our dishes</option>
+
+
+								
+							</select>
+						</p>
+						<p>
+							Gender<br>
+							<input type="radio" value="Male" name="gender" id="gender" required="required" checked="checked">
+							<label for="male">Male</label><br>
+
+							<input type="radio" value="Female" id="gender" name="gender" required="required">
+							<label for="female">Female</label><br>
+
+							<input type="radio" value="Not Provided" id="gender" name="gender" required="required">
+							<label for="nogen">Prefer to not provide</label>
+						</p>
+					</form>
+				</section>
+			</section>
+			<h1> Click in the map! </h1>
+			<a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+			<div class="view-box">
+				<div id="dots" v-on:click="displayOrder">
+					<div
+						v-for="(details, key) in orders"
+						v-bind:style="{ left: details.x + 'px', top: details.y + 'px'}">
+						T
+					</div>
+				</div>
+			</div>
+			<div id="submitForm">
+				<button type="submit" v-on:click="markDone(); addOrder()" id="submitButton"><img src="img\submitbuttonGif.gif" width="100%"> </button>
+			</div>
+			<section id="orderInfo">
+				<div id="yourOrder" v-for="info in myOrder">
+						<p>
+							<h2>Your order:</h2>
+							<h3>Customer information</h3>
+								Name: {{info.name}} <br>Email: {{info.email}} <br>Payment method: {{info.payMethod}}<br>Gender: {{info.gender}}
+								
+							<h3>Delivery information:</h3>
+								<ul v-for="burg in burgerType">
+									<li> {{burg}}</li>
+								</ul>
+
+				</div>
+			</section>
+		</main>
+		<footer>
+			<hr>
+			<p>
+				Fat burger joint inc
+			</p>
+		</footer>
+    </body>
 </html>
